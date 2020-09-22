@@ -75,11 +75,10 @@ function getSummary(character) {
 */
 function getVehiclesCostInCreditsSumTotal(character) {
   // TODO: Add your code here.
-  let totalCost = character.vehicles.forEach(function(item){
-    if (item === "cost_in_credits"){
-      
-    }
-  })
+  const total = character.vehicles.reduce((total, item) => {
+    return (total += item.cost_in_credits);
+  }, 0);
+  return total;
 }
 
 /**
@@ -94,6 +93,10 @@ function getVehiclesCostInCreditsSumTotal(character) {
 */
 function getStarshipPassengerAndCrewSumTotal(character) {
   // TODO: Add your code here.
+  const total = character.starships.reduce((total, item) => {
+    return (total += item.crew + item.passengers);
+  }, 0);
+  return total;
 }
 /**
  * ### Challenge `getNthFilm`
