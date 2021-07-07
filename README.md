@@ -3,10 +3,10 @@
 
  Local Setup Instructions: From Command Line</summary>
 
-1. Fork & clone to your local computer
-1. `cd` into your newly cloned repository
-1. Install using `npm`
-1. Run test command
+1. [x]Fork & clone to your local computer
+1. [x]`cd` into your newly cloned repository
+1. [x]Install using `npm`
+1. [x]Run test command
 
 
 ```sh

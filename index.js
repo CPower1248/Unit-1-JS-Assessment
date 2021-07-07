@@ -5,6 +5,7 @@
 // 👇 COMPLETE YOUR WORK BELOW 👇
 */
 
+
 /**
  * ### Challenge `getName`
  * Example ✅
@@ -30,7 +31,7 @@ function getName(character) {
  */
 function getFilmCount(character) {
   // TODO: Add your code inside the functions (others below).
-
+  return character.films.length
 }
 
 /**
@@ -43,6 +44,11 @@ function getFilmCount(character) {
 */
 function getSecondStarshipName(character) {
   // TODO: Add your code here.
+  if(character.starships.length > 0){
+  return character.starships[1].name
+  } else {
+    return `none`
+  }
 }
 
 /**
@@ -56,6 +62,7 @@ function getSecondStarshipName(character) {
  */
 function getSummary(character) {
   // TODO: Add your code here.
+  return `${character.name}, ${character.height}cm, ${character.mass}kg. Featured in ${character.films.length} films.`
 }
 
 /**
@@ -68,6 +75,10 @@ function getSummary(character) {
 */
 function getVehiclesCostInCreditsSumTotal(character) {
   // TODO: Add your code here.
+  const total = character.vehicles.reduce((total, item) => {
+    return (total += item.cost_in_credits);
+  }, 0);
+  return total;
 }
 
 /**
@@ -82,8 +93,11 @@ function getVehiclesCostInCreditsSumTotal(character) {
 */
 function getStarshipPassengerAndCrewSumTotal(character) {
   // TODO: Add your code here.
+  const total = character.starships.reduce((total, item) => {
+    return (total += item.crew + item.passengers);
+  }, 0);
+  return total;
 }
-
 /**
  * ### Challenge `getNthFilm`
  * MVP Challenge 🤓
@@ -99,6 +113,7 @@ function getStarshipPassengerAndCrewSumTotal(character) {
 */
 function getNthFilm(character, filmNumber) {
   // TODO: Add your code here.
+  return character.films[filmNumber - 1]
 }
 
 /**
